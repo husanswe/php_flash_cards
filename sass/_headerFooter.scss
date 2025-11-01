@@ -1,3 +1,5 @@
+@use "colors";
+
 .header {
     position: sticky;
     top: 0;
@@ -5,8 +7,8 @@
 }
 
 .header, .footer {
-    background: $header-bg;
-    color: $header-color;
+    background: colors.$header-bg;
+    color: colors.$header-color;
     font-size: 0.5rem;;
     width: 100%;
     min-height: 60px;
@@ -19,13 +21,13 @@
 
 .footer {
     position: fixed;
-    top: calc(100vh-60px);
+    top: calc(100vh - 60px);
     left: 0;
-    @include flexCenter;
+    @include mixins.flexCenter;
     font-size: 0.6rem;
 }
 
-@include mq(768px) {
+@include mixins.mq(768px) {
     .header {
         font-size: 1rem;
     }
@@ -34,7 +36,7 @@
     }
 }
 
-@include mq(1024px) {
+@include mixins.mq(1024px) {
     .title-break {
         display: none;
     }

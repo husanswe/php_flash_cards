@@ -1,46 +1,18 @@
-@import url("https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+/* Error: Undefined variable.
+ *    ,
+ * 10 |     background: $header-bg;
+ *    |                 ^^^^^^^^^^
+ *    '
+ *   sass\_headerFooter.scss 10:17  @use
+ *   sass\main.scss 4:1             root stylesheet */
 
-html {
-  font-size: 42px;
-  font-family: "Roboto", sans-serif;
-}
-
-body {
-  width: 100%;
-  min-height: 100vh;
-  background: #eee;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  padding-bottom: 60px;
-}
-
-.header {
-  position: sticky;
-  top: 0;
-  z-index: 1;
-}
-
-.header, .footer {
-  background: #333;
-  color: #fff;
-  font-size: 0.5rem;
-  width: 100%;
-  min-height: 60px;
-  text-align: center;
-}
-
-.title-break {
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
   display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Undefined variable.\a    \2577 \a 10 \2502      background: $header-bg;\d\a    \2502                  ^^^^^^^^^^\a    \2575 \a   sass\\_headerFooter.scss 10:17  @use\a   sass\\main.scss 4:1             root stylesheet";
 }
-
-.footer {
-  position: fixed;
-  top: 100vh-;
-}/*# sourceMappingURL=main.css.map */
